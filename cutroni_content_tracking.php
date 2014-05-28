@@ -32,8 +32,10 @@ if (is_admin()) {
     require_once JCACT_PATH . 'admin/class-admin.php';
 }
 
-add_action('wp_enqueue_scripts', 'jcact_enqueue_scripts');
-add_action('login_enqueue_scripts', 'jcact_enqueue_scripts');
+if (is_single() ) {
+    add_action('wp_enqueue_scripts', 'jcact_enqueue_scripts');
+}
+// add_action('login_enqueue_scripts', 'jcact_enqueue_scripts');
 
 function jcact_enqueue_scripts() {
 
