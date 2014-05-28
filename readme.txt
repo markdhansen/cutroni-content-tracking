@@ -4,8 +4,8 @@ Tags: analytics, reporting, content tracking, google analytics
 Requires at least: 3.9.1
 Tested up to: 3.9.1
 Stable tag: 1.0
-License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl.html
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 Implementation of Justin Cutroni's Advanced Content Tracking suggestions.
 
