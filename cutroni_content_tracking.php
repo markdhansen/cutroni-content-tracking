@@ -32,9 +32,8 @@ if (is_admin()) {
     require_once JCACT_PATH . 'admin/class-admin.php';
 }
 
-if (is_single() ) {
-    add_action('wp_enqueue_scripts', 'jcact_enqueue_scripts');
-}
+add_action('wp_enqueue_scripts', 'jcact_enqueue_scripts');
+
 // add_action('login_enqueue_scripts', 'jcact_enqueue_scripts');
 
 function jcact_enqueue_scripts() {
@@ -62,6 +61,11 @@ function jcact_enqueue_scripts() {
     $localizationArr = array('debugMode' => $debugModeValue, 'startedReadingLocation' => $startedReadingLocationValue,
         'delayAfterScroll' => $delayAfterScrollValue, 'contentSelector' => $contentSelectorValue);
     wp_localize_script('jcact_script', 'jcact_script_options', $localizationArr);
+
+    // only enqueue the script if the content is a post
+    wp_reset_query();
+    if (is_single()) {
         wp_enqueue_script('jcact_script');
+    }
 }
 
