@@ -1,6 +1,5 @@
 === Advanced Content Tracking with Google Analytics ===
 Contributors: megalytic
-Donate link: http://megalytic.com
 Tags: analytics, reporting, content tracking, google analytics
 Requires at least: 3.9.1
 Tested up to: 3.9.1
